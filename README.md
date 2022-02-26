@@ -11,6 +11,7 @@ BetterHTMLHelp是基于Python制作的一个能够快捷启动hh.exe并利用‘
 
 Stantard版本中加入了一些对学生的保护措施（也就是白名单）。如果网址中不含baidu.com，本次不发送命令。马奇诺防线。
 
+只有32位版。
 # BetterHTMLHelp 使用
 
 如果在访问时出现
