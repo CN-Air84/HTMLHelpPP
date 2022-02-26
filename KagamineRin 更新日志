@@ -1,8 +1,8 @@
-[1.2]
+[KR1.2]
 -更新CMDMode，有一些简单的小动画（成本1分不到）
 -为SingleWMode加了一个title
 -优化程序体积
-[1.3]
+[KR1.3]
 -将CMDWmode和原SingleWMode打包到一起
 -为CMDMode也加上一个Title
 -优化体验，但没优化多少。
