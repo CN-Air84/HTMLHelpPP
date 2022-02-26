@@ -1,17 +1,17 @@
-# HTMLHelpPP 介绍
-HTMLHelp++是基于Python制作的一个能够快捷启动hh.exe并利用‘特性’打开网页的工具。
+# BetterHTMLHelp 介绍
+BetterHTMLHelp是基于Python制作的一个能够快捷启动hh.exe并利用‘特性’打开网页的工具。
 
 
 
 没什么用，顶多是拿来‘私密上网’。但是hh.exe中内置的ie7已经过时了。
 
-一般称其为HHPP或HH++。真是个奇怪的缩写。
+一般称其为BHHP。真是个奇怪的缩写。
 
 不知道什么人会用到它。
 
 Stantard版本中加入了一些对学生的保护措施（也就是白名单）。如果网址中不含baidu.com，本次不发送命令。马奇诺防线。
 
-# HTMLHelpPP 使用
+# BetterHTMLHelp 使用
 
 如果在访问时出现
 ’当前页面的脚本发生错误‘，
