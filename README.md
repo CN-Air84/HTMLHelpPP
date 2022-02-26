@@ -26,6 +26,6 @@ Stantard版本中加入了一些对学生的保护措施（也就是白名单）
 正确示范：
 www.baidu.com    image.baidu.com
 错误示范:
-http://www.baidu.com
+http://www.baidu.com 
 
 如果复制时发现不包含域名（比如/search/detail?ct=503316480&z=&tn=baiduimagedetail&ipn=d&word=KagamineRin&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=），请手动补上主域名（比如在百度图片看到这种超链接，就先输入image.baidu.com，然后粘贴。）
