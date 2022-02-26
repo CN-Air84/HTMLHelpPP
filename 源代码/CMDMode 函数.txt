@@ -1,0 +1,72 @@
+def CMDmsgbox(text='text',title='title',windowlong=20):
+    system(r'color 17')
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    printtext = windowlong-len(text)
+    printtext = printtext/2
+    printtext2 = int(printtext)
+    printtext2 = printtext2 - 1
+    printtext3 = windowlong-2
+    print(title)
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    print(printtext3*'  ')
+    print('  '*printtext2,text,'  '*printtext2)
+    print(printtext3*'  ')
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    input('按下Enter以确认。')
+    clearCMD()
+enterOutput = ''
+def CMDenterbox(text='text',title='title',inputTips='input',windowlong=20):
+    system(r'color 17')
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    printtext = windowlong-int(len(text))
+    printtext = printtext/2
+    printtext2 = int(printtext)
+    printtext2 = printtext2 - 1
+    printtext3 = windowlong-2
+    print(title)
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    print(printtext3*'  ')
+    print('  '*printtext2,text,'  '*printtext2)
+    print(printtext3*'  ')
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    global enterOutput
+    enterOutput = input(inputTips)
+    clearCMD()
+def ez_msgbox(text='text'):
+    print('————————————————————')
+    print(text)
+    print('————————————————————')
