@@ -1,0 +1,167 @@
+# 主程序
+import easygui
+from os import system
+import sys
+
+path = open('D:/bhhppath.txt','r')
+insPath=path.read()
+print(type(insPath))
+path = open('D:/bhhppath.txt','r')
+insPath=path.read()
+Titlefile = open(insPath+r'\文件\版本\forScript.txt','r')
+defaultTitle=Titlefile.read()
+Mode = easygui.buttonbox('如何显示？',defaultTitle, ('[复古]CMD显示', '[现代]独立窗口显示','退出'))
+if Mode == '[复古]CMD显示':
+    system(r'start '+str(insPath)+'\文件\显示模式\CMDMode.py')
+    print(r'start '+str(insPath)+'\文件\显示模式\CMDMode.py')
+    sys.exit()
+elif Mode == '[现代]独立窗口显示':
+    system(r'start '+str(insPath)+'\文件\显示模式\SingleMode.pyw')
+    #sys.exit()
+else:
+    sys.exit()
+# 初始化
+import easygui
+import sys
+import os
+path = open('D:/bhhppath.txt','w')
+path.write('')
+path.close()
+
+path = open('D:/bhhppath.txt','w')
+insPath = easygui.enterbox('输入您安装程序的位置。不要删除D:/bttppath.txt。从文件管理器中复制，然后把\改成/。输入后重启程序。')
+path.write(insPath)
+path.close()
+# CMDMode 
+from os import system
+from time import sleep
+
+def clearCMD(n=50):
+    for i in range(n):
+        print('\n')
+
+path = open('D:/bhhppath.txt','r')
+insPath=path.read()
+Titlefile = open(insPath+r'\文件\版本\forScript.txt','r')
+defaultTitle=Titlefile.read()
+
+def CMDmsgbox(text='text',title='title',windowlong=20):
+    system(r'color 17')
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    printtext = windowlong-len(text)
+    printtext = printtext/2
+    printtext2 = int(printtext)
+    printtext2 = printtext2 - 1
+    printtext3 = windowlong-2
+    print(title)
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    print(printtext3*'  ')
+    print('  '*printtext2,text,'  '*printtext2)
+    print(printtext3*'  ')
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    input('按下Enter以确认。')
+    clearCMD()
+enterOutput = ''
+def CMDenterbox(text='text',title='title',inputTips='input',windowlong=20):
+    system(r'color 17')
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    printtext = windowlong-int(len(text))
+    printtext = printtext/2
+    printtext2 = int(printtext)
+    printtext2 = printtext2 - 1
+    printtext3 = windowlong-2
+    print(title)
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    print(printtext3*'  ')
+    print('  '*printtext2,text,'  '*printtext2)
+    print(printtext3*'  ')
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    for wl in range(0,windowlong):
+        if wl == windowlong-1:
+            print('—')
+        else:
+            print('—',end='')
+    global enterOutput
+    enterOutput = input(inputTips)
+    clearCMD()
+def ez_msgbox(text='text'):
+    print('————————————————————')
+    print(text)
+    print('————————————————————')
+exttime = 3
+while True:
+    CMDenterbox('您要如何访问互联网？请输入对应的功能代码：\n百度 ;bd           图片 ;pic \n自定义网址 ;cus    退出 ;ext    \n版本    -hlp',defaultTitle,'在这里输入代码')
+    if enterOutput == ';bd':
+        CMDenterbox('你想搜索什么？','BetterHTMLHelp KR1.02 ')
+        system(r'hh http://www.baidu.com/s?wd='+enterOutput)
+        ez_msgbox('已开启！')
+    elif enterOutput == ';pic':
+        CMDmsgbox('请在确认后自行搜索！','已开启')
+        system(r'hh http://image.baidu.com/')
+    elif enterOutput == ';cus':
+        CMDenterbox('你想搜索什么？', 'BetterHTMLHelp KR1.02 ','')
+        system(r'hh http://' + enterOutput)
+        ez_msgbox('已开启！')
+    elif enterOutput == ';ext':
+        for i in range(3):
+            ez_msgbox('程序将在'+str(exttime)+'秒后退出！')
+            sleep(1)
+            exttime = exttime - 1
+        break
+    else:
+        system(r'start '+insPath+'\文件\版本\Version.py')
+# SingleMode
+from os import system
+from easygui import msgbox,buttonbox,enterbox
+from sys import exit
+from time import sleep
+path = open('D:/bhhppath.txt','r')
+insPath=path.read()
+Titlefile = open(insPath+r'\文件\版本\forScript.txt','r')
+defaultTitle=Titlefile.read()
+while True:
+    mode = buttonbox('您要如何访问？', defaultTitle, ('百度', '图片', '自己输入网址','退出'))
+    if mode == '百度':
+        content = enterbox('你想搜索什么？',defaultTitle)
+        system(r'hh http://www.baidu.com/s?wd='+content)
+    elif mode == '图片':
+        msgbox('已经打开image.baidu.com。请在网站中搜索。',defaultTitle)
+        system(r'hh http://image.baidu.com/')
+    elif mode == '自己输入网址':
+            content = enterbox('你想搜索什么？',defaultTitle)
+            system(r'hh http://'+content)
+            msgbox('网址合规。 已开启！',defaultTitle+' 网页已经开启！')
+    elif mode == '退出':
+        exit()
+# Version
+import easygui
+easygui.msgbox('\n如果系统内没有hh.exe，请打开    /文件/帮助    ，拷贝一份到C:/Windows \n\n\n\n\n\n\nGithub主页：\ngithub.com/CN-Air84/BetterHTMLHelp\nBuild 0034\n                            2022.03.03','BetterHTMLHelp Ver1.04')
