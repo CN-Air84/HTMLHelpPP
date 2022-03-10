@@ -1,3 +1,5 @@
+# 最新版下载地址
+hmall.lanzoui.com/b017bh42d#%E5%AF%86%E7%A0%81:KR1.4
 # BetterHTMLHelp 介绍
 BetterHTMLHelp是基于Python制作的一个能够快捷启动hh.exe并利用‘特性’打开网页的工具。
 
